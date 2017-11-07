@@ -4,9 +4,15 @@ body {
 }
 
 .content {
-    max-width: 30em;
+    max-width: 40em;
     margin: 0px auto;
     background-color: white;
     border-radius: 15px;
     padding: 15px;
+}
+.buttons button{
+  width: 49%;
+}
+#voucher_btn{
+  float: right;
 }
