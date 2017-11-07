@@ -14,17 +14,27 @@
         <div class="content">
             <section>
                 <h1>Logga in till nätverket</h1>
+                <div class="buttons">
+                  <button id="user_btn">
+                    Användarnamn och lösenord
+                  </button>
+                  <button id="voucher_btn">
+                    Gästlösen
+                  </button>
+                </div>
                 <form method="post" action="$PORTAL_ACTION$">
                     <fieldset>
-                        <label for="auth_user">Username</label>
-                        <input name="auth_user" id="auth_user" type="text">
+                        <div id="user_pass">
+                          <label for="auth_user">Username</label>
+                          <input name="auth_user" id="auth_user" type="text">
 
-                        <label for="auth_pass">Password</label>
-                        <input name="auth_pass" id="auth_pass" type="password">
-
-                        <label for="auth_voucher">Guest code</label>
-                        <input name="auth_voucher" id="auth_voucher" type="text">
-
+                          <label for="auth_pass">Password</label>
+                          <input name="auth_pass" id="auth_pass" type="password">
+                        </div>
+                        <div id="voucher">
+                          <label for="auth_voucher">Guest code</label>
+                          <input name="auth_voucher" id="auth_voucher" type="text">
+                        </div>
                         <input name="zone" type="hidden" value="$PORTAL_ZONE$">
                         <input name="accept" type="submit" value="Continue">
                     </fieldset>
@@ -32,10 +42,11 @@
             </section>
             <article>
                 <h1>Information</h1>
-                <p>För att komma åt internät så behöver ni använda er av en kod som finns att hämta i entrén.</p>
+                <p>För att komma åt internet så behöver ni använda er av en kod som finns att hämta i entrén.</p>
 
-                <p>Scheman och annan trevlig information hittar ni sedan på vå hemsidan wonderlan.se</p>
+                <p>Scheman och annan trevlig information hittar ni sedan på vår hemsidan wonderlan.se</p>
             </article>
         </div>
+        <script src="captiveportal-loginchange.js"></script>
     </body>
 </html>
